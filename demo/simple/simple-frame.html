@@ -4,18 +4,23 @@
     <strong>Instructions:</strong>
     Drag &amp; drop the list items to move them around, or just click to select them.
     If that's too boring, check out the <a href="#/nested">nested container demo</a>
-    hello by adele
 </div>
 
 <div class="simpleDemo row">
 
     <div class="col-md-8">
         <div class="row">
-             <div class="panel-body" ng-include="'simple/simple.html'"></div>
-
+            <div ng-repeat="(listName, list) in models.lists" class="col-md-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">List {{listName}}</h3>
+                    </div>
+                    <div class="panel-body" ng-include="'simple/simple.html'"></div>
+                </div>
+            </div>
         </div>
 
-        
+        <div view-source="simple"></div>
 
     </div>
 
